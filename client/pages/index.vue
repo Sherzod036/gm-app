@@ -6,6 +6,8 @@
 
       <About />
 
+      <Benefits />
+
       <Services />
 
       <Products />

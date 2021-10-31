@@ -10,15 +10,22 @@
   &__block {
     display: block;
     width: 100%;
+    &:hover {
+      & .news__block-poster img {
+        transform: scale(1.1);
+      }
+    }
     &-poster {
       width: 100%;
       height: 350px;
       margin-bottom: 25px;
+      overflow: hidden;
       & img {
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        transition: 0.5s;
       }
     }
     &-desc {
