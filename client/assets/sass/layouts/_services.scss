@@ -1,0 +1,143 @@
+.services {
+  position: relative;
+  margin-bottom: 180px;
+  &__image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 745px;
+    height: 745px;
+    opacity: 0;
+    transition: 0.3s;
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &.service_show {
+      opacity: 1;
+    }
+  }
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__content {
+    max-width: 792px;
+    width: 100%;
+    margin-top: 100px;
+  }
+  &__pre-title {
+    font-weight: 600;
+    font-size: 16px;
+    color: $secondary;
+    margin-bottom: 5px;
+  }
+  &__title {
+    margin-bottom: 35px;
+  }
+}
+
+.service {
+  position: relative;
+  width: 100%;
+  padding: 25px 48px;
+  border-radius: 6px;
+  margin-bottom: 35px;
+  transition: 0.3s;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover {
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+    & .service__count {
+      font-size: 110px;
+    }
+  }
+  &_1 {
+    background: #f0f0f0;
+  }
+  &_2 {
+    background: #eaf1d8;
+  }
+  &_3 {
+    background: #c0db97;
+  }
+  &__desc {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+  }
+  &__count {
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 75px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    right: -24px;
+    transition: 0.5s;
+  }
+}
+
+.service__circle {
+  position: absolute;
+  right: 120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+
+  &:before {
+    content: '';
+    position: relative;
+    display: block;
+    width: 200%;
+    height: 200%;
+    box-sizing: border-box;
+    margin-left: -50%;
+    margin-top: -50%;
+    border-radius: 45px;
+    background-color: #329dff;
+    animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #329dff;
+    border-radius: 15px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    animation: pulse-dot 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) -0.4s infinite;
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.33);
+  }
+  80%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-dot {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}

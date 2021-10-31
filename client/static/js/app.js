@@ -1,42 +1,44 @@
-console.log('app')
-
-let didScroll
-
 let lastScrollTop = 0
+const header = document.getElementById('header')
 
-let delta = 5
+window.addEventListener('scroll', () => {
+  let scrollTop = window.pageYOffset || document.documentElement.scrollTop
 
-const header = document.querySelector('.header')
-let headerHeight = document.querySelector('.header').offsetHeight
+  scrollTop > lastScrollTop
+    ? header.classList.add('header_up')
+    : header.classList.remove('header_up')
 
-console.log('headerHeight', headerHeight)
-
-window.addEventListener('scroll', function () {
-  didScroll = true
+  lastScrollTop = scrollTop
 })
 
-setInterval(function () {
-  if (didScroll) {
-    hasScrolled()
+const services = document.querySelectorAll('.service')
+const servicesImage = document.querySelectorAll('.services__image')
+Array.from(services).map((service) => {
+  service.addEventListener('mouseenter', function () {
+    Array.from(servicesImage).map((image) =>
+      image.classList.remove('service_show')
+    )
+    const attr = service.attributes[0].value
+    document.getElementById(attr).classList.add('service_show')
+  })
+})
 
-    didScroll = false
-  }
-}, 250)
+// ScrollMagic
+const feedbackImage = document.querySelector('.feedback__image')
 
-function hasScrolled() {
-  let st = this.scrollTop()
-
-  if (Math.abs(lastScrollTop - st) <= delta) return
-
-  if (st > lastScrollTop && st > headerHeight) {
-    header.classList.remove('header--down')
-    header.classList.add('header--up')
-  } else {
-    if (st + window.innerHeight < document.innerHeight) {
-      header.classList.remove('header--up')
-      header.classList.add('header--down')
-    }
-  }
-
-  lastScrollTop = st
-}
+let controller = new ScrollMagic.Controller()
+let scene = new ScrollMagic.Scene({
+  triggerElement: '#feedback',
+  duration: 400
+})
+  .setTween(
+    new TimelineMax().add([
+      TweenMax.fromTo(
+        feedbackImage,
+        1,
+        { width: '50%', height: '50%' },
+        { width: '100%', height: '100%' }
+      )
+    ])
+  )
+  .addTo(controller)

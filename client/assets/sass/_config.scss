@@ -11,7 +11,7 @@ $dark: #333;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'ProximaSoft';
   font-weight: 400;
   font-size: 18px;
   color: $dark;
@@ -30,4 +30,23 @@ span {
 
 li {
   list-style: none;
+}
+
+input {
+  border: 0;
+  background: none;
+  outline: none;
+}
+
+textarea {
+  border: 0;
+  background: none;
+  resize: none;
+  outline: none;
+}
+
+button {
+  border: 0;
+  background: none;
+  outline: none;
 }

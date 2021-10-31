@@ -3,6 +3,16 @@
     <Header />
     <main>
       <Hero />
+
+      <About />
+
+      <Services />
+
+      <Products />
+
+      <Feedback />
+
+      <News />
     </main>
   </div>
 </template>

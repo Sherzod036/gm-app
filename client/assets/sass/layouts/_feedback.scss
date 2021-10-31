@@ -1,0 +1,104 @@
+.feedback {
+  position: relative;
+  margin-bottom: 80px;
+  &__left-block {
+    width: 50%;
+    height: 805px;
+    background: $primary;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &__right-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 805px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &__image {
+    & img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 805px;
+  }
+  &__form {
+    position: relative;
+    z-index: 2;
+    max-width: 453px;
+    width: 100%;
+    &-title {
+      font-weight: 700;
+      font-size: 47px;
+      text-transform: uppercase;
+      color: #3dcce6;
+      margin-bottom: 6px;
+    }
+    &-desc {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 22px;
+      color: #fff;
+      margin-bottom: 40px;
+    }
+    &-input {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid #fff;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      padding: 12px 13px;
+      font-weight: 600;
+      font-size: 20px;
+      color: #fff;
+      &::placeholder {
+        font-weight: 600;
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+    &-textarea {
+      width: 100%;
+      height: 114px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid #fff;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      padding: 12px 13px;
+      font-weight: 600;
+      font-size: 20px;
+      color: #fff;
+      &::placeholder {
+        font-weight: 600;
+        font-size: 20px;
+        color: #fff;
+      }
+    }
+    &-button {
+      font-weight: 700;
+      font-size: 24px;
+      color: #fff;
+      background: #00c3df;
+      border-radius: 6px;
+      padding: 11px 17px;
+      cursor: pointer;
+      border: 1px solid #00c3df;
+      transition: 0.3s;
+      &:hover {
+        border: 1px solid #fff;
+        background: $primary;
+      }
+    }
+  }
+}

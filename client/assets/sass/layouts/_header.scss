@@ -1,6 +1,5 @@
 .button {
-  font-family: 'GoogleSans';
-  font-weight: 500;
+  font-weight: 600;
   font-size: 18px;
   color: #fff;
   padding: 7px 15px;
@@ -12,17 +11,49 @@
   }
 }
 
+.layout-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.layout-button {
+  font-weight: 600;
+  font-size: 18px;
+  color: #5a5a5a;
+  background: #fff;
+  border: 1px solid #5a5a5a;
+  border-radius: 5px;
+  padding: 7px 15px;
+  transition: 0.3s;
+  &:hover {
+    border: 1px solid $primary;
+    color: #fff;
+    background: $primary;
+  }
+}
+
+.title {
+  font-weight: 700;
+  font-size: 47px;
+  text-transform: uppercase;
+}
+
 .header {
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 999;
+  transition: 0.5s;
+  &.header_up {
+    top: -138px;
+  }
 }
 
 .topbar {
   width: 100%;
   background: #eef7ff;
-  padding: 12px 0;
+  padding: 10px 0;
   &__container {
     display: flex;
     align-items: center;
@@ -46,9 +77,7 @@
       }
     }
     &-text {
-      font-family: 'GoogleSans';
-      font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       font-size: 14px;
       color: $primary;
       transition: 0.3s;
@@ -79,7 +108,7 @@
   background: #fff;
   box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
     0px 2px 4px -1px rgba(0, 0, 0, 0.06);
-  padding: 15px 0;
+  padding: 10px 0;
   &__container {
     display: flex;
     align-items: center;
@@ -94,9 +123,8 @@
       }
     }
     &__link {
-      font-family: 'GoogleSans';
-      font-weight: 500;
-      font-size: 21px;
+      font-weight: 600;
+      font-size: 22px;
     }
   }
 }

@@ -14,8 +14,27 @@ export default {
     script: [
       {
         type: 'text/javascript',
+        src: 'js/gsap.js',
+        body: true,
+        mode: 'client'
+      },
+      {
+        type: 'text/javascript',
+        src: 'js/ScrollMagic.min.js',
+        body: true,
+        mode: 'client'
+      },
+      {
+        type: 'text/javascript',
+        src: 'js/animation.gsap.min.js',
+        body: true,
+        mode: 'client'
+      },
+      {
+        type: 'text/javascript',
         src: 'js/app.js',
-        body: true
+        body: true,
+        mode: 'client'
       }
     ]
   },
