@@ -18,8 +18,8 @@ Array.from(services).map((service) => {
     Array.from(servicesImage).map((image) =>
       image.classList.remove('service_show')
     )
-    const attr = service.attributes[0].value
-    document.getElementById(attr).classList.add('service_show')
+    const id = service.attributes[0].value
+    document.getElementById(id).classList.add('service_show')
   })
 })
 
