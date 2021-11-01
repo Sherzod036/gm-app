@@ -16,7 +16,7 @@ export default {
 
   css: ['bootstrap/dist/css/bootstrap-grid.css', '~assets/sass/app.scss'],
 
-  plugins: [],
+  plugins: [{ src: '~/plugins/vue-scrollmagic.js', ssr: false }],
 
   components: true,
 

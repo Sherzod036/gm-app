@@ -86,23 +86,22 @@
 </template>
 
 <script>
+import { TweenMax, TimelineMax } from 'gsap'
+
 export default {
   mounted() {
-    if (process.client) {
-      const card_1 = document.querySelector('.card_1')
-
-      const tl = new TimelineMax().add([TweenMax.to(card_1, 1, { top: 0 })])
-
-      const controller = new this.$scrollmagic.Controller()
-      const scene = new this.$scrollmagic.Scene({
+    const card_1 = document.querySelector('.card_1')
+    const tl = new TimelineMax()
+    const scene = this.$scrollmagic
+      .scene({
         triggerElement: '#benefits',
         triggerHook: 0,
         duration: '100%'
       })
-        .setTween(tl)
-        .setPin('#benefits', { pushFollowers: false })
-        .addTo(controller)
-    }
+      .setPin('#benefits', { pushFollowers: false })
+      .setTween(tl.add([TweenMax.to(card_1, 1, { top: 0 })]))
+
+    this.$scrollmagic.addScene(scene)
   }
 }
 </script>

@@ -18,8 +18,7 @@
     "nuxt": "^2.15.7",
     "sass": "^1.38.0",
     "sass-loader": "10",
-    "scrollmagic": "^2.0.8",
-    "scrollmagic-plugin-gsap": "^1.0.4"
+    "vue-scrollmagic": "^1.2.0"
   },
   "devDependencies": {
     "eslint-config-prettier": "^8.3.0",
