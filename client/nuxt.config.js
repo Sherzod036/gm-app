@@ -10,17 +10,13 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [{ rel: 'icon', type: 'image/png', href: '/fav.png' }]
+    link: [{ rel: 'icon', type: 'image/png', href: '/fav.png' }],
+    script: [{}]
   },
 
   css: ['bootstrap/dist/css/bootstrap-grid.css', '~assets/sass/app.scss'],
 
-  plugins: [
-    { src: '~/plugins/gsap.js', mode: 'client' },
-    { src: '~/plugins/scrollmagic.js', mode: 'client' },
-    { src: '~/plugins/scrollmagicplugingsap.js', mode: 'client' },
-    { src: '~/plugins/app.js', mode: 'client' }
-  ],
+  plugins: [],
 
   components: true,
 

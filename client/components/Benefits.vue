@@ -86,12 +86,9 @@
 </template>
 
 <script>
-import { TweenMax, TimelineMax } from 'gsap'
 export default {
   mounted() {
     if (process.client) {
-      // const { TimelineMax, TweenMax } = this.$gsap
-
       const card_1 = document.querySelector('.card_1')
 
       const tl = new TimelineMax().add([TweenMax.to(card_1, 1, { top: 0 })])
