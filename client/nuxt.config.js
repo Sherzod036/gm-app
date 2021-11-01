@@ -10,38 +10,17 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [{ rel: 'icon', type: 'image/png', href: '/fav.png' }],
-    script: [
-      {
-        type: 'text/javascript',
-        src: 'js/gsap.js',
-        body: true,
-        mode: 'client'
-      },
-      {
-        type: 'text/javascript',
-        src: 'js/ScrollMagic.min.js',
-        body: true,
-        mode: 'client'
-      },
-      {
-        type: 'text/javascript',
-        src: 'js/animation.gsap.min.js',
-        body: true,
-        mode: 'client'
-      },
-      {
-        type: 'text/javascript',
-        src: 'js/app.js',
-        body: true,
-        mode: 'client'
-      }
-    ]
+    link: [{ rel: 'icon', type: 'image/png', href: '/fav.png' }]
   },
 
   css: ['bootstrap/dist/css/bootstrap-grid.css', '~assets/sass/app.scss'],
 
-  plugins: [],
+  plugins: [
+    { src: '~/plugins/gsap.js', mode: 'client' },
+    { src: '~/plugins/scrollmagic.js', mode: 'client' },
+    { src: '~/plugins/scrollmagicplugingsap.js', mode: 'client' },
+    { src: '~/plugins/app.js', mode: 'client' }
+  ],
 
   components: true,
 

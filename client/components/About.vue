@@ -1,10 +1,10 @@
 <template>
-  <section class="about">
+  <section id="about" class="about">
     <div class="about__container container">
       <div class="about__content">
         <h2 class="about__title title">О компании</h2>
         <p class="about__desc">
-          GRAND HEALTH MARKETING –динамично развивающаяся фармацевтическая
+          GRAND HEALTH MARKETING – динамично развивающаяся фармацевтическая
           компания на рынке Узбекистана. Двигаясь с девизом «Стремясь к
           совершенству», мы поддерживаем высокие этические стандарты, следуем
           принципам цивилизованного ведения бизнеса и имеем крепкие и

@@ -1,5 +1,5 @@
 <template>
-  <section class="services">
+  <section id="services" class="services">
     <span id="service_1" class="services__image service_show">
       <img src="~assets/img/services/service-1.jpg" alt="" />
     </span>
