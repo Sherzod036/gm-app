@@ -1,10 +1,11 @@
 .services {
   position: relative;
-  margin-bottom: 180px;
+  padding-bottom: 240px;
+  background: #fff;
   &__image {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 80px;
     width: 745px;
     height: 745px;
     opacity: 0;
@@ -26,7 +27,7 @@
   &__content {
     max-width: 792px;
     width: 100%;
-    margin-top: 100px;
+    margin-top: 160px;
   }
   &__pre-title {
     font-weight: 600;

@@ -1,5 +1,3 @@
-import ScrollMagic from 'scrollmagic'
-
 let lastScrollTop = 0
 const header = document.getElementById('header')
 
@@ -44,18 +42,3 @@ Array.from(services).map((service) => {
 //     ])
 //   )
 //   .addTo(feedbackController)
-
-// const benefitsController = ScrollMagic.Controller()
-
-// const card_1 = document.querySelector('.card_1')
-
-// const tween = TimelineMax().add([TweenMax.to(card_1, 1, { top: 0 })])
-
-// const benefitsScene = ScrollMagic.Scene({
-//   triggerElement: '#benefits',
-//   triggerHook: 0,
-//   duration: '100%'
-// })
-//   .setPin('#benefits', { pushFollowers: false })
-//   .addTo(benefitsController)
-// .setTween(tween)

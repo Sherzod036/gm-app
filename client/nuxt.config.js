@@ -11,12 +11,21 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [{ rel: 'icon', type: 'image/png', href: '/fav.png' }],
-    script: [{}]
+    script: [
+      {
+        type: 'text/javascript',
+        src: '/app.js',
+        body: true
+      }
+    ]
   },
 
   css: ['bootstrap/dist/css/bootstrap-grid.css', '~assets/sass/app.scss'],
 
-  plugins: [{ src: '~/plugins/vue-scrollmagic.js', ssr: false }],
+  plugins: [
+    { src: '~/plugins/vue-scrollmagic.js', ssr: false },
+    { src: '~/plugins/gsap.js', ssr: false }
+  ],
 
   components: true,
 
