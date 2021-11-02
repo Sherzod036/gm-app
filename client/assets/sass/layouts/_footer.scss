@@ -1,0 +1,92 @@
+.footer {
+  padding-top: 55px;
+  background: #eef7ff;
+  &__logo {
+    margin-bottom: 20px;
+  }
+  &__desc {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 22px;
+    color: $primary;
+  }
+  &__content {
+    padding-bottom: 34px;
+    border-bottom: 1px solid #c4c4c4;
+  }
+  &__navigation .list {
+    &__item {
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    &__link {
+      font-weight: 600;
+      font-size: 16px;
+      transition: 0.3s;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  &__contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &:hover .footer__contact-text {
+      color: $primary;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &-icon {
+      width: 34px;
+      text-align: center;
+      margin-right: 14px;
+    }
+    &-text {
+      font-weight: 600;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+  }
+  &__warn {
+    display: flex;
+    margin-bottom: 35px;
+    &-icon {
+      flex: 0 0 26px;
+      margin-right: 10px;
+    }
+    &-text {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+  &__subscribe {
+    display: flex;
+    align-items: center;
+    & a {
+      margin-right: 15px;
+      &:last-child {
+        margin-right: 0;
+      }
+      & svg path {
+        transition: 0.3s;
+      }
+    }
+    & a:hover svg path {
+      fill: $secondary;
+    }
+  }
+}
+
+.copy {
+  padding: 15px 0;
+  &__text {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+  }
+}

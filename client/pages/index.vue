@@ -12,10 +12,11 @@
 
       <Products />
 
-      <Feedback />
-
       <News />
+
+      <Feedback />
     </main>
+    <Footer />
   </div>
 </template>
 

@@ -2,7 +2,7 @@
   <div class="navbar">
     <div class="navbar__container container">
       <a href="#" class="navbar__logo">
-        <img src="~assets/img/logos/logo.png" alt="" />
+        <img src="~assets/img/logos/logo.svg" alt="" />
       </a>
 
       <nav class="navbar__navigation">
